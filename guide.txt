@@ -1,0 +1,52 @@
+html:
+
+- create container #calc
+- in #calc create input #display (readonly)
+- in #calc create #keys
+- in #keys create like 15 keys with numbers, operations, etc
+- each key has a onClick(), for number and ops to a function to append, for C one to clear everything, and for = one to execute.
+- we can give some special class to the ones we want to style differently like the operators being orange or som'n
+
+
+
+
+
+css details:
+in #keys, to make it 4 colums use grid-template-colums property, to be the repeat() func, repeat(4, 1fr). 1fr stands for fractionary something and it means that each column should use an even amount of space
+
+
+
+
+js:
+  - get the const for display
+we got three funcs to create (append to display, calculate and clear display)
+
+append:
+  - pass input as a param - use .value and += the param that we pass in the html
+
+clear:
+  - the same as before but setting it to = ""
+
+calculate:
+  - set display equal to =, and use eval function, so eval(display.value)
+
+ERRORS:
+we change the calculate() to inclue a try block, it goes like:
+try{
+  stuff to try like the func calculate
+}
+catch(error){
+  what to do if the thing got fucked up
+}
+
+you can use display.value = "", or display.style.color "red", "white" about everywhere to change different ui behaviours so try that dog
+
+
+
+KEYS: eval(), +=, .value, try, catch(error)
+
+
+
+
+
+
